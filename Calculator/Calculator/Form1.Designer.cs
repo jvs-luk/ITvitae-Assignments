@@ -56,23 +56,24 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.GhostWhite;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(317, 73);
+            this.textBox1.Size = new System.Drawing.Size(317, 96);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.LavenderBlush;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.DimGray;
-            this.button7.Location = new System.Drawing.Point(12, 146);
+            this.button7.Location = new System.Drawing.Point(12, 172);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 50);
             this.button7.TabIndex = 1;
@@ -85,7 +86,7 @@
             this.button8.BackColor = System.Drawing.Color.LavenderBlush;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.DimGray;
-            this.button8.Location = new System.Drawing.Point(93, 146);
+            this.button8.Location = new System.Drawing.Point(93, 172);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 50);
             this.button8.TabIndex = 2;
@@ -98,7 +99,7 @@
             this.button9.BackColor = System.Drawing.Color.LavenderBlush;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.DimGray;
-            this.button9.Location = new System.Drawing.Point(174, 146);
+            this.button9.Location = new System.Drawing.Point(174, 172);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 50);
             this.button9.TabIndex = 3;
@@ -111,7 +112,7 @@
             this.buttonAdd.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonAdd.Location = new System.Drawing.Point(255, 146);
+            this.buttonAdd.Location = new System.Drawing.Point(255, 172);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 50);
             this.buttonAdd.TabIndex = 4;
@@ -124,7 +125,7 @@
             this.buttonMinus.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.buttonMinus.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonMinus.Location = new System.Drawing.Point(255, 202);
+            this.buttonMinus.Location = new System.Drawing.Point(255, 228);
             this.buttonMinus.Name = "buttonMinus";
             this.buttonMinus.Size = new System.Drawing.Size(75, 50);
             this.buttonMinus.TabIndex = 8;
@@ -137,7 +138,7 @@
             this.button6.BackColor = System.Drawing.Color.LavenderBlush;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.DimGray;
-            this.button6.Location = new System.Drawing.Point(174, 202);
+            this.button6.Location = new System.Drawing.Point(174, 228);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 50);
             this.button6.TabIndex = 7;
@@ -150,7 +151,7 @@
             this.button5.BackColor = System.Drawing.Color.LavenderBlush;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.DimGray;
-            this.button5.Location = new System.Drawing.Point(93, 202);
+            this.button5.Location = new System.Drawing.Point(93, 228);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 50);
             this.button5.TabIndex = 6;
@@ -163,7 +164,7 @@
             this.button4.BackColor = System.Drawing.Color.LavenderBlush;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Location = new System.Drawing.Point(12, 202);
+            this.button4.Location = new System.Drawing.Point(12, 228);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 50);
             this.button4.TabIndex = 5;
@@ -176,7 +177,7 @@
             this.buttonMultiply.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.buttonMultiply.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonMultiply.Location = new System.Drawing.Point(255, 258);
+            this.buttonMultiply.Location = new System.Drawing.Point(255, 284);
             this.buttonMultiply.Name = "buttonMultiply";
             this.buttonMultiply.Size = new System.Drawing.Size(75, 50);
             this.buttonMultiply.TabIndex = 12;
@@ -189,7 +190,7 @@
             this.button3.BackColor = System.Drawing.Color.LavenderBlush;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Location = new System.Drawing.Point(174, 258);
+            this.button3.Location = new System.Drawing.Point(174, 284);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 50);
             this.button3.TabIndex = 11;
@@ -202,7 +203,7 @@
             this.button2.BackColor = System.Drawing.Color.LavenderBlush;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(93, 258);
+            this.button2.Location = new System.Drawing.Point(93, 284);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 50);
             this.button2.TabIndex = 10;
@@ -215,7 +216,7 @@
             this.button1.BackColor = System.Drawing.Color.LavenderBlush;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(12, 258);
+            this.button1.Location = new System.Drawing.Point(12, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 50);
             this.button1.TabIndex = 9;
@@ -228,7 +229,7 @@
             this.buttonDivide.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.buttonDivide.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonDivide.Location = new System.Drawing.Point(255, 314);
+            this.buttonDivide.Location = new System.Drawing.Point(255, 340);
             this.buttonDivide.Name = "buttonDivide";
             this.buttonDivide.Size = new System.Drawing.Size(75, 50);
             this.buttonDivide.TabIndex = 16;
@@ -242,7 +243,7 @@
             this.buttonDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.buttonDecimal.ForeColor = System.Drawing.SystemColors.Desktop;
             this.buttonDecimal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDecimal.Location = new System.Drawing.Point(174, 314);
+            this.buttonDecimal.Location = new System.Drawing.Point(174, 340);
             this.buttonDecimal.Name = "buttonDecimal";
             this.buttonDecimal.Size = new System.Drawing.Size(75, 50);
             this.buttonDecimal.TabIndex = 15;
@@ -254,7 +255,7 @@
             this.button0.BackColor = System.Drawing.Color.LavenderBlush;
             this.button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.button0.ForeColor = System.Drawing.Color.DimGray;
-            this.button0.Location = new System.Drawing.Point(93, 314);
+            this.button0.Location = new System.Drawing.Point(93, 340);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(75, 50);
             this.button0.TabIndex = 14;
@@ -267,7 +268,7 @@
             this.buttonPercent.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.buttonPercent.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonPercent.Location = new System.Drawing.Point(254, 90);
+            this.buttonPercent.Location = new System.Drawing.Point(254, 116);
             this.buttonPercent.Name = "buttonPercent";
             this.buttonPercent.Size = new System.Drawing.Size(75, 50);
             this.buttonPercent.TabIndex = 13;
@@ -281,7 +282,7 @@
             this.buttonEquals.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.buttonEquals.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonEquals.Location = new System.Drawing.Point(12, 370);
+            this.buttonEquals.Location = new System.Drawing.Point(12, 396);
             this.buttonEquals.Name = "buttonEquals";
             this.buttonEquals.Size = new System.Drawing.Size(237, 50);
             this.buttonEquals.TabIndex = 19;
@@ -294,7 +295,7 @@
             this.buttonBackspace.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonBackspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.buttonBackspace.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonBackspace.Location = new System.Drawing.Point(174, 90);
+            this.buttonBackspace.Location = new System.Drawing.Point(174, 116);
             this.buttonBackspace.Name = "buttonBackspace";
             this.buttonBackspace.Size = new System.Drawing.Size(75, 50);
             this.buttonBackspace.TabIndex = 24;
@@ -308,7 +309,7 @@
             this.buttonMemory.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonMemory.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.buttonMemory.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonMemory.Location = new System.Drawing.Point(93, 90);
+            this.buttonMemory.Location = new System.Drawing.Point(93, 116);
             this.buttonMemory.Name = "buttonMemory";
             this.buttonMemory.Size = new System.Drawing.Size(75, 50);
             this.buttonMemory.TabIndex = 23;
@@ -321,7 +322,7 @@
             this.buttonCE.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonCE.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.buttonCE.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonCE.Location = new System.Drawing.Point(12, 90);
+            this.buttonCE.Location = new System.Drawing.Point(12, 116);
             this.buttonCE.Name = "buttonCE";
             this.buttonCE.Size = new System.Drawing.Size(75, 50);
             this.buttonCE.TabIndex = 22;
@@ -334,7 +335,7 @@
             this.buttonC.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonC.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.buttonC.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonC.Location = new System.Drawing.Point(12, 314);
+            this.buttonC.Location = new System.Drawing.Point(12, 340);
             this.buttonC.Name = "buttonC";
             this.buttonC.Size = new System.Drawing.Size(75, 50);
             this.buttonC.TabIndex = 21;
@@ -346,7 +347,7 @@
             // 
             this.buttonEuro.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.buttonEuro.Location = new System.Drawing.Point(254, 370);
+            this.buttonEuro.Location = new System.Drawing.Point(254, 396);
             this.buttonEuro.Name = "buttonEuro";
             this.buttonEuro.Size = new System.Drawing.Size(76, 49);
             this.buttonEuro.TabIndex = 25;
@@ -359,7 +360,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(341, 432);
+            this.ClientSize = new System.Drawing.Size(341, 459);
             this.Controls.Add(this.buttonEuro);
             this.Controls.Add(this.buttonBackspace);
             this.Controls.Add(this.buttonMemory);
@@ -394,28 +395,41 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+
+        // Numbers
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button0;
+        private System.Windows.Forms.Button buttonDecimal;
+
+        // Maths
+
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonMinus;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button buttonMultiply;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonMultiply; 
         private System.Windows.Forms.Button buttonDivide;
-        private System.Windows.Forms.Button buttonDecimal;
-        private System.Windows.Forms.Button button0;
-        private System.Windows.Forms.Button buttonPercent;
         private System.Windows.Forms.Button buttonEquals;
+
+        // Special symbols 
+
+        private System.Windows.Forms.Button buttonPercent;
+        private System.Windows.Forms.Button buttonEuro;
+
+        // Memory functions
+    
         private System.Windows.Forms.Button buttonBackspace;
         private System.Windows.Forms.Button buttonMemory;
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.Button buttonC;
-        private System.Windows.Forms.Button buttonEuro;
+
     }
 }
 
