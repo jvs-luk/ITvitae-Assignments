@@ -208,7 +208,14 @@ namespace Calculator
                     textBox1.Text = (num1 * num2).ToString();
                     break;
                 case "/":
-                    textBox1.Text = (num1 + num2).ToString();
+                    if (num2 != 0)
+                    {
+                        textBox1.Text = (num1 + num2).ToString();
+                    }
+                    else
+                    {
+                        textBox1.Text = "Can't divide by zero";
+                    }
                     break;
             }
         }
@@ -257,6 +264,11 @@ namespace Calculator
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDecimal_Click(object sender, EventArgs e)
         {
 
         }
