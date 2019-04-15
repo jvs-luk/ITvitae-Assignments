@@ -17,8 +17,8 @@ namespace Calculator
             InitializeComponent();
         }
 
-        long num1 = 0;
-        long num2 = 0;
+        double num1 = 0;
+        double num2 = 0;
         string operand = "";
 
         private void Form1_Load(object sender, EventArgs e)
@@ -270,7 +270,13 @@ namespace Calculator
 
         private void buttonDecimal_Click(object sender, EventArgs e)
         {
+            string DecimalDot = ".";
+            if (num1 != 0)
+            {
+                string num1String = Convert.ToString(num1);
+                bool DecimalPresent = num1String.Contains(DecimalDot);
 
+            }
         }
     }
 }
