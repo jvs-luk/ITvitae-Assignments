@@ -17,8 +17,8 @@ namespace Calculator
             InitializeComponent();
         }
 
-        double num1 = 0;
-        double num2 = 0;
+        string num1 = 0;
+        string num2 = 0;
         string operand = "";
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,142 +30,52 @@ namespace Calculator
 
         private void button0_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10);
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10);
-                textBox1.Text = num2.ToString();
-            }
+         
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 1;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 1;
-                textBox1.Text = num2.ToString();
-            }
+       
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 2;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 2;
-                textBox1.Text = num2.ToString();
-            }
+         
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 3;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 3;
-                textBox1.Text = num2.ToString();
-            }
+         
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 4;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 4;
-                textBox1.Text = num2.ToString();
-            }
+         
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 5;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 5;
-                textBox1.Text = num2.ToString();
-            }
+         
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 6;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 6;
-                textBox1.Text = num2.ToString();
-            }
+        
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 7;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 7;
-                textBox1.Text = num2.ToString();
-            }
+         
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 8;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 8;
-                textBox1.Text = num2.ToString();
-            }
+          
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (operand == "")
-            {
-                num1 = (num1 * 10) + 9;
-                textBox1.Text = num1.ToString();
-            }
-            else
-            {
-                num2 = (num2 * 10) + 9;
-                textBox1.Text = num2.ToString();
-            }
+           
         }
 
         // Maths buttons
@@ -199,18 +109,18 @@ namespace Calculator
             switch (operand)
             {
                 case "+":
-                    textBox1.Text = (num1 + num2).ToString();
+                    textBox1.Text = num1 + num2;
                     break;
                 case "-":
-                    textBox1.Text = (num1 - num2).ToString();
+                    textBox1.Text = num1 - num2;
                     break;
                 case "*":
-                    textBox1.Text = (num1 * num2).ToString();
+                    textBox1.Text = num1 * num2;
                     break;
                 case "/":
                     if (num2 != 0)
                     {
-                        textBox1.Text = (num1 + num2).ToString();
+                        textBox1.Text = num1 + num2;
                     }
                     else
                     {
@@ -239,6 +149,7 @@ namespace Calculator
             num1 = 0;
             num2 = 0;
             operand = "";
+            textBox1.Text = "0";
         }
 
         private void buttonCE_Click(object sender, EventArgs e)
@@ -246,10 +157,12 @@ namespace Calculator
             if (operand == "")
             {
                 num1 = 0;
+                textBox1.Text = "0";
             }
             else
             {
                 num2 = 0;
+                textBox1.Text = "0";
             }
         }
 
@@ -270,11 +183,24 @@ namespace Calculator
 
         private void buttonDecimal_Click(object sender, EventArgs e)
         {
-            string DecimalDot = ".";
-            if (num1 != 0)
+            if (operand == "")
             {
-                string num1String = Convert.ToString(num1);
-                bool DecimalPresent = num1String.Contains(DecimalDot);
+                if (!num1.Contains("."))
+                {
+                    num1 += ".";
+                    textBox1.Text = num1;
+                }
+                num1 = Convert.ToDecimal(num1);
+            }
+
+            else
+            {
+                if (!num2.Contains("."))
+                {
+                    num2 += ".";
+                    textBox1.Text = num2;
+                }
+                num2 = Convert.ToDecimal(num2);
 
             }
         }
