@@ -17,65 +17,175 @@ namespace Calculator
             InitializeComponent();
         }
 
-        string num1 = 0;
-        string num2 = 0;
+        string num1 = "";
+        string num2 = "";
         string operand = "";
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+        
+        public string AddNumbers(string oldNum,
+                                 string addedNum)
+        {
+            string newNum = "";
 
+            if (oldNum == "0")
+            {
+                newNum = addedNum;
+            }
+            else
+            {
+                newNum = oldNum + addedNum;
+            }
+
+            return newNum;  
+
+        }
+        
         // Number buttons
 
         private void button0_Click(object sender, EventArgs e)
         {
-         
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "0");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "0");
+                textBox1.Text = num2;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-       
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "1");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "1");
+                textBox1.Text = num2;
+            }
+             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-         
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "2");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "2");
+                textBox1.Text = num2;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-         
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "3");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "3");
+                textBox1.Text = num2;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-         
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "4");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "4");
+                textBox1.Text = num2;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-         
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "5");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "5");
+                textBox1.Text = num2;
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-        
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "6");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "6");
+                textBox1.Text = num2;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-         
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "7");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "7");
+                textBox1.Text = num2;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-          
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "8");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "8");
+                textBox1.Text = num2;
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-           
+            if (operand == "")
+            {
+                num1 = AddNumbers(textBox1.Text, "9");
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = AddNumbers(textBox1.Text, "9");
+                textBox1.Text = num2;
+            }
         }
 
         // Maths buttons
@@ -106,21 +216,28 @@ namespace Calculator
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
+            decimal num1Decimal = Convert.ToDecimal(num1);
+            decimal num2Decimal = Convert.ToDecimal(num2);
+
             switch (operand)
             {
                 case "+":
-                    textBox1.Text = num1 + num2;
+                    textBox1.Text = Convert.ToString(num1Decimal + num2Decimal, 
+                                                    System.Globalization.CultureInfo.InvariantCulture);
                     break;
                 case "-":
-                    textBox1.Text = num1 - num2;
+                    textBox1.Text = Convert.ToString(num1Decimal - num2Decimal, 
+                                                    System.Globalization.CultureInfo.InvariantCulture);
                     break;
                 case "*":
-                    textBox1.Text = num1 * num2;
+                    textBox1.Text = Convert.ToString(num1Decimal * num2Decimal, 
+                                                    System.Globalization.CultureInfo.InvariantCulture);
                     break;
                 case "/":
-                    if (num2 != 0)
+                    if (num2 != "0")
                     {
-                        textBox1.Text = num1 + num2;
+                        textBox1.Text = Convert.ToString(num1Decimal / num2Decimal, 
+                                                        System.Globalization.CultureInfo.InvariantCulture);
                     }
                     else
                     {
@@ -146,8 +263,8 @@ namespace Calculator
 
         private void buttonC_Click(object sender, EventArgs e)
         {
-            num1 = 0;
-            num2 = 0;
+            num1 = "";
+            num2 = "";
             operand = "";
             textBox1.Text = "0";
         }
@@ -156,12 +273,12 @@ namespace Calculator
         {
             if (operand == "")
             {
-                num1 = 0;
+                num1 = "";
                 textBox1.Text = "0";
             }
             else
             {
-                num2 = 0;
+                num2 = "";
                 textBox1.Text = "0";
             }
         }
@@ -190,7 +307,7 @@ namespace Calculator
                     num1 += ".";
                     textBox1.Text = num1;
                 }
-                num1 = Convert.ToDecimal(num1);
+                
             }
 
             else
@@ -200,7 +317,6 @@ namespace Calculator
                     num2 += ".";
                     textBox1.Text = num2;
                 }
-                num2 = Convert.ToDecimal(num2);
 
             }
         }
