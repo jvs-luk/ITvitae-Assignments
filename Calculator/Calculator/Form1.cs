@@ -289,7 +289,16 @@ namespace Calculator
 
         private void buttonBackspace_Click(object sender, EventArgs e)
         {
-
+            if (operand == "")
+            {
+                num1 = num1.Remove(num1.Length - 1);
+                textBox1.Text = num1;
+            }
+            else
+            {
+                num2 = num2.Remove(num2.Length - 1);
+                textBox1.Text = num2;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
