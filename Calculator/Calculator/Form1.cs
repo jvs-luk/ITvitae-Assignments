@@ -221,6 +221,9 @@ namespace Calculator
 
             switch (operand)
             {
+                //Culture is specified to control how the decimal dot is interpreted 
+                //by the PC
+
                 case "+":
                     textBox1.Text = Convert.ToString(num1Decimal + num2Decimal, 
                                                     System.Globalization.CultureInfo.InvariantCulture);
