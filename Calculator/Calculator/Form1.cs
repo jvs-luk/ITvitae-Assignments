@@ -221,26 +221,22 @@ namespace Calculator
 
             switch (operand)
             {
-                //Culture is specified to control how the decimal dot is interpreted 
-                //by the PC
-
                 case "+":
-                    textBox1.Text = Convert.ToString(num1Decimal + num2Decimal, 
-                                                    System.Globalization.CultureInfo.InvariantCulture);
+                    textBox1.Text = Convert.ToString(num1Decimal + num2Decimal);
                     break;
+
                 case "-":
-                    textBox1.Text = Convert.ToString(num1Decimal - num2Decimal, 
-                                                    System.Globalization.CultureInfo.InvariantCulture);
+                    textBox1.Text = Convert.ToString(num1Decimal - num2Decimal);
                     break;
+
                 case "*":
-                    textBox1.Text = Convert.ToString(num1Decimal * num2Decimal, 
-                                                    System.Globalization.CultureInfo.InvariantCulture);
+                    textBox1.Text = Convert.ToString(num1Decimal * num2Decimal);
                     break;
+
                 case "/":
                     if (num2 != "0")
                     {
-                        textBox1.Text = Convert.ToString(num1Decimal / num2Decimal, 
-                                                        System.Globalization.CultureInfo.InvariantCulture);
+                        textBox1.Text = Convert.ToString(num1Decimal / num2Decimal);
                     }
                     else
                     {
@@ -305,9 +301,9 @@ namespace Calculator
         {
             if (operand == "")
             {
-                if (!num1.Contains("."))
+                if (!num1.Contains(","))
                 {
-                    num1 += ".";
+                    num1 += ",";
                     textBox1.Text = num1;
                 }
                 
@@ -315,9 +311,9 @@ namespace Calculator
 
             else
             {
-                if (!num2.Contains("."))
+                if (!num2.Contains(","))
                 {
-                    num2 += ".";
+                    num2 += ",";
                     textBox1.Text = num2;
                 }
 
