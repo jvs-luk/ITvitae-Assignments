@@ -193,29 +193,31 @@ namespace Calculator
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             operand = "+";
-            textBox1.Text = "0";
+            textBox1.Text = num1 + "+ \r\n" + "0";
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
             operand = "-";
-            textBox1.Text = "0";
+            textBox1.Text = num1 + "- \r\n" + "0";
         }
 
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
             operand = "*";
-            textBox1.Text = "0";
+            textBox1.Text = num1 + "* \r\n" + "0";
         }
 
         private void buttonDivide_Click(object sender, EventArgs e)
         {
             operand = "/";
-            textBox1.Text = "0";
+            textBox1.Text = num1 + "/ \r\n" + "0";
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
+            // Bounds check
+
             decimal num1Decimal = Convert.ToDecimal(num1);
             decimal num2Decimal = Convert.ToDecimal(num2);
 
@@ -255,6 +257,22 @@ namespace Calculator
 
         private void buttonEuro_Click(object sender, EventArgs e)
         {
+            /*
+            bool eurCheck = true;
+            decimal eurNum1 = Convert.ToDecimal(num1);
+            decimal eurNum2 = Convert.ToDecimal(num2);
+            string formattedEurNum1 = String.Format("{0:C}", eurNum1);
+            string formattedEurNum2 = String.Format("{0:C}", eurNum2);
+
+            if (operand == "")
+            {
+                textBox1.Text = "€" + formattedEurNum1;
+            }
+            else
+            {
+                textBox1.Text = "€" + formattedEurNum2;
+            }
+            */
 
         }
 
