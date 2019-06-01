@@ -48,6 +48,7 @@ namespace Calculator
 
         private void button0_Click(object sender, EventArgs e)
         {
+            
             if (operand == "")
             {
                 num1 = AddNumbers(textBox1.Text, "0");
@@ -193,30 +194,29 @@ namespace Calculator
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             operand = "+";
-            textBox1.Text = num1 + "+ \r\n" + "0";
+            textBox1.Text = "0";
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
             operand = "-";
-            textBox1.Text = num1 + "- \r\n" + "0";
+            textBox1.Text = "0";
         }
 
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
             operand = "*";
-            textBox1.Text = num1 + "* \r\n" + "0";
+            textBox1.Text = "0";
         }
 
         private void buttonDivide_Click(object sender, EventArgs e)
         {
             operand = "/";
-            textBox1.Text = num1 + "/ \r\n" + "0";
+            textBox1.Text = "0";
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
-        {
-            // Bounds check
+        {         
 
             decimal num1Decimal = Convert.ToDecimal(num1);
             decimal num2Decimal = Convert.ToDecimal(num2);
@@ -224,21 +224,25 @@ namespace Calculator
             switch (operand)
             {
                 case "+":
-                    textBox1.Text = Convert.ToString(num1Decimal + num2Decimal);
+                    textBox1.Text = num1 + "+" + num2 + " \r\n" + 
+                                    Convert.ToString(num1Decimal + num2Decimal);
                     break;
 
                 case "-":
-                    textBox1.Text = Convert.ToString(num1Decimal - num2Decimal);
+                    textBox1.Text = num1 + "-" + num2 + " \r\n" + 
+                                    Convert.ToString(num1Decimal - num2Decimal);
                     break;
 
                 case "*":
-                    textBox1.Text = Convert.ToString(num1Decimal * num2Decimal);
+                    textBox1.Text = num1 + "*" + num2 + " \r\n" + 
+                                    Convert.ToString(num1Decimal * num2Decimal);
                     break;
 
                 case "/":
                     if (num2 != "0")
                     {
-                        textBox1.Text = Convert.ToString(num1Decimal / num2Decimal);
+                        textBox1.Text = num1 + "/" + num2 + " \r\n" + 
+                                        Convert.ToString(num1Decimal / num2Decimal);
                     }
                     else
                     {
